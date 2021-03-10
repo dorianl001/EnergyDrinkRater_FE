@@ -5,7 +5,7 @@ import Comments from './Comments';
 
 function Ratebev(props) {
     const [comments, setComments] = useState([]);
-  let http = "https://energydrinkrater-be.herokuapp.com/comment";
+  let http = "https://energydrinkrater-be.herokuapp.com";
 
   useEffect(() => {
     const getComments = () => {
@@ -27,9 +27,6 @@ function Ratebev(props) {
     return (
         <div className="ratebev">
             <h1>Ratebev</h1>
-        <div className="jumbotron">
-            <img src="#" alt="energy drink"/>
-        </div>    
 
         <div id="main-container">
         <header>
@@ -64,9 +61,6 @@ function Ratebev(props) {
         </header>
 
         <div id="content-wrap">
-          <h1>
-            <u>EnergyDrinkRater Timeline</u>
-          </h1>
         <div>
           <Comments comments={comments}/>
         </div>

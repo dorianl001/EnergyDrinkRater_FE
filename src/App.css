@@ -1,25 +1,89 @@
 .App {
   text-align: center;
 }
-
+/* About Page */
 
 .About {
   border: solid 1px black;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 550px;
-  padding: 30px;
-  width: 90%;
-  margin: auto;
-};
-
+  height: 530px;
+  padding: 40px;
+  width: 98%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
 
 .aboutText {
-  padding: 1rem;
-  margin-left: 5rem;
+  padding: 1rem; 
+  margin-left: 5rem; 
+  margin-top: 50px;
 }
 
 .image1 {
-  margin-right: 5rem;
+  /* margin-right: 5rem; */
+  padding: 20px;
+  margin-top: 30px;
 }
+
+.logo {
+  display: flex;
+  justify-content: baseline;
+  padding-left: 35px;
+  margin-top: 12px;
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-around;
+  margin-top: -34px;
+  margin-bottom: 25px;
+  padding-left: 180px;
+}
+
+.Header {
+  border: solid 2px black;
+}
+
+/* Home Page */ 
+
+.home-container {
+  border: solid 1px black;
+  height: 700px;
+  width: 1338px;
+  padding-left: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 40px;
+}
+
+.card1 {
+  box-shadow: 10px 5px 5px black;
+  height: 490px;
+  padding: 10px;
+}
+
+.card2 {
+  box-shadow: 10px 5px 5px black;
+  height: 490px;
+  padding: 10px;
+}
+
+.card3 {
+  box-shadow: 10px 5px 5px black;
+  height: 490px;
+  padding: 10px;
+}
+
+.card4 {
+  box-shadow: 10px 5px 5px black;
+  height: 490px;
+  padding: 10px;
+}
+
+/* Ratebev Page */ 
+

@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 function About(props) {
     return (
@@ -12,10 +13,10 @@ function About(props) {
             <h1>About us</h1>
             <p>Welcome to EnergyDrinkRater! This is a community for energy drink enthusiasts<br/>
             to gather together and talk about their favorite energy drinks. You are able<br/>
-            to rate your favorite or least favorite drinks, post comments, and look up some<br/>
+            to rate your favorite or least favorite drinks, post comments, and look up<br/>
             caffeine stats available in each drink. 
             </p>
-            <button className="button">Learn More</button>
+            <Button variant='primary' className="Button">Learn More</Button>
             </div>
         </div>
     );
