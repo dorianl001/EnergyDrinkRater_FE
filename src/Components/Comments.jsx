@@ -3,7 +3,7 @@ import Comment from './Comment';
 
 
 function Comments(comments) {
-    console.log(comments)
+   
     return (
         <div>
            {comments.comments.map((item) => (

@@ -7,6 +7,12 @@ function Ratebev(props) {
     const [comments, setComments] = useState([]);
   let http = "https://energydrinkrater-be.herokuapp.com";
 
+    const [body, setBody] = useState({body: " ", title: " ", username: " " });
+
+    const bodyChange = (event) => {
+        setBody({...body, [event.target.className]: event.target.value})
+    }
+
   useEffect(() => {
     const getComments = () => {
       fetch(http)
@@ -23,6 +29,26 @@ function Ratebev(props) {
   },[http]);
 
 
+  async function createComment(event) {
+    event.preventDefault();
+    await fetch("https://energydrinkrater-be.herokuapp.com", {
+    method: "POST",
+    headers: {
+      "Content-Type": "Application/Type"
+    },
+    body: JSON.stringify(body)  
+    })
+    .then ((res) => res.json())
+    .then ((res) => {
+        setComments(res);
+    }) 
+    .catch((error) => {
+      console.log(error);
+    })
+    console.log(body)
+  } 
+
+
 
     return (
         <div className="ratebev">
@@ -33,11 +59,11 @@ function Ratebev(props) {
 
           <div id = "create-comment">
             <h3 className="crud-heading">Create comment</h3>
-            <form action="https://energydrinkrater-be.herokuapp.com/comment" method="post" className="postForm">
-                <input type="text" placeholder="username" name="username"></input>
-                <input type="text" placeholder="title" name="title"></input>
-                <input type="text" placeholder="body" name="body"></input>
-                <input type="submit" value="Submit"></input>
+            <form method="post" className="postForm">
+                <input className="username" onChange={bodyChange} type="text" placeholder="username"></input>
+                <input className="title" onChange={bodyChange} type="text" placeholder="title"></input>
+                <textarea className="body" onChange={bodyChange} type="text" placeholder="body"></textarea>
+                <input onClick={createComment} type="submit" value="Submit"></input>
             </form>
           </div>
 
