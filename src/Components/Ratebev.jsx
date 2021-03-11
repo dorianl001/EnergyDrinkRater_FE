@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Comments from './Comments';
-
+import { Link } from 'react-router-dom'
 
 
 function Ratebev(props) {
@@ -124,9 +124,9 @@ function Ratebev(props) {
 
           <div id = "Delete-comment">
             <h3 className="crud-heading">Delete Comment</h3>
-            <form action="https://energydrinkrater-be.herokuapp.com/comment?_method=DELETE" method="post" className="postForm">
+            <form action="https://energydrinkrater-be.herokuapp.com/?_method=DELETE" method="post" className="postForm">
                 <input className="id" onClick={deleteComment} onChange={bodyChange} type="text" placeholder="ID"></input>
-                <input type="submit" value="Submit"></input>
+                <Link to="/" ><input type="submit" value="Submit"></input></Link>
             </form>
           </div>
         </header>
